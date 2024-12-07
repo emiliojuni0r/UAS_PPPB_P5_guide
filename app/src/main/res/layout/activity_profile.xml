@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+    android:background="@color/p5_red">
+
+    <!--title container-->
+    <LinearLayout
+        android:id="@+id/page_title_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_horizontal"
+        android:background="@drawable/rounded_item_rc"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/p5_icon_profile"/>
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textSize="50sp"
+            android:fontFamily="@font/p5expose"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <!--end of title container-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/username_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="LOGOUT"
+        android:textSize="30sp"
+        android:padding="5dp"
+        android:fontFamily="@font/p5menu"
+        android:textColor="@color/p5_red"
+        android:background="@drawable/rounded_item_rc"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:id="@+id/img_profile"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/p5_profile_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/username_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/img_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:id="@+id/label_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username : "
+            android:textSize="30sp"
+            android:fontFamily="@font/p5expose"
+            android:textColor="@color/white"/>
+        <!--    ini value username dari login    -->
+        <TextView
+            android:id="@+id/username_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="your username login"
+            android:textSize="30sp"
+            android:fontFamily="@font/p5hatty"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+
+
+    <!-- bottom nav (untuk mengarahkan ke halaman lain)  -->]
+    <LinearLayout
+        android:id="@+id/bottom_nav_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/black"
+        android:paddingVertical="5dp">
+
+        <ImageView
+            android:id="@+id/bottom_nav_persona"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/p5_icon_app"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/bottom_nav_favorite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/p5_icon_fav"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/bottom_nav_profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/p5_icon_profile"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:background="@drawable/p5_detail_bg">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--title container-->
+            <LinearLayout
+                android:id="@+id/page_title_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center_horizontal"
+                android:background="@drawable/rounded_item_rc"
+                android:layout_marginTop="10dp"
+                android:padding="5dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/p5_img_mask"/>
+                <TextView
+                    android:id="@+id/page_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Persona Detail"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/p5expose"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <!--end of title container-->
+
+            <!--  Main container  -->
+
+        <!--    gambar persona -->
+            <ImageView
+                android:id="@+id/persona_detail_img"
+                android:layout_width="250dp"
+                android:layout_height="220dp"
+                android:src="@drawable/example_izanagi"
+                app:layout_constraintTop_toBottomOf="@id/page_title_container"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                />
+
+        <!--    ini hanya untuk background-->
+            <ImageView
+                android:id="@+id/background_name"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:src="@drawable/p5_text_box"
+                app:layout_constraintTop_toBottomOf="@id/persona_detail_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginLeft="20dp">
+            </ImageView>
+
+            <!--    value nama persona -->
+            <TextView
+                android:id="@+id/persona_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Izanagi no okami"
+                android:fontFamily="@font/p5expose"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintTop_toTopOf="@id/background_name"
+                app:layout_constraintEnd_toEndOf="@id/background_name"
+                app:layout_constraintStart_toStartOf="@id/background_name"
+                app:layout_constraintBottom_toBottomOf="@id/background_name"
+                android:layout_marginTop="10dp"/>
+
+            <!--  arcana  -->
+            <LinearLayout
+                android:id="@+id/arcana_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/background_name"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/arcana_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arcana :"
+                    android:fontFamily="@font/p5expose"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"/>
+                <!--    Ini value arcana nya    -->
+                <TextView
+                    android:id="@+id/persona_detail_arcana"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="World"
+                    android:fontFamily="@font/p5hatty"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+
+            <!--  level  -->
+            <LinearLayout
+                android:id="@+id/level_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/arcana_container"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/level_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Level :"
+                    android:fontFamily="@font/p5expose"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"/>
+                <!--    Ini value level nya    -->
+                <TextView
+                    android:id="@+id/persona_detail_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="91"
+                    android:fontFamily="@font/p5hatty"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+
+            <!--  stats  -->
+            <LinearLayout
+                android:id="@+id/stats_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/level_container"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/stats_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stats :"
+                    android:fontFamily="@font/p5expose"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"/>
+                <!--    Ini value stats nya    -->
+                <TextView
+                    android:id="@+id/persona_detail_stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="strength: 80, magic: 60, endurance: 70, agility: 65, luck: 55"
+                    android:fontFamily="@font/p5hatty"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+
+            <!--  skills  -->
+            <LinearLayout
+                android:id="@+id/skills_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/stats_container"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/skills_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skills :"
+                    android:fontFamily="@font/p5expose"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"/>
+                <!--    Ini value stats nya    -->
+                <TextView
+                    android:id="@+id/persona_detail_skills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Myriad Truths (Magic, Level 91), Victory Cry (Passive, Level 91), Repel Physical (Passive, Level 91), Salvation (Heal, Level 91)"
+                    android:fontFamily="@font/p5hatty"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+
+            <!--  Fusion Recipe  -->
+            <LinearLayout
+                android:id="@+id/fusion_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/skills_container"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/fusion_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fusion Recipe :"
+                    android:fontFamily="@font/p5expose"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"/>
+                <!--    Ini value stats nya    -->
+                <TextView
+                    android:id="@+id/persona_detail_fusion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Izanagi (Fool), Kaguya (Aeon), Izanami (World)"
+                    android:fontFamily="@font/p5hatty"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+
+            <!--  Elements  -->
+            <LinearLayout
+                android:id="@+id/elements_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/fusion_container"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/elements_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="elements Recipe :"
+                    android:fontFamily="@font/p5expose"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"/>
+                <!--    Ini value stats nya    -->
+                <TextView
+                    android:id="@+id/persona_detail_elements"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="absorb: Thunder, null: Physical, weak: None"
+                    android:fontFamily="@font/p5hatty"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/two_buttons_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/elements_container"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textSize="40sp"
+                    android:fontFamily="@font/p5menu"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_item_rc"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_add_to_favorites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Add to favorite"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/p5expose"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_item_rc"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+
+
+            <!--     just ignore this text view       -->
+            <TextView
+                android:id="@+id/nothing_just_ignore_this"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="p"
+                app:layout_constraintTop_toBottomOf="@id/two_buttons_container"
+                android:textColor="@color/p5_red"/>
+
+
+            <!--  End of Main Container  -->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- bottom nav (untuk mengarahkan ke halaman lain)  -->]
+    <LinearLayout
+        android:id="@+id/bottom_nav_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/black"
+        android:paddingVertical="5dp">
+
+        <ImageView
+            android:id="@+id/bottom_nav_persona"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/p5_icon_app"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/bottom_nav_favorite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/p5_icon_fav"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/bottom_nav_profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/p5_icon_profile"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

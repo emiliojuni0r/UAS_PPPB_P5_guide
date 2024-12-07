@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.AdminEditActivity"
+    android:background="@color/p5_red">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back to list"
+        android:textColor="@color/p5_red"
+        android:background="@drawable/rounded_item_rc"
+        android:fontFamily="@font/p5hatty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"/>
+
+    <!--title container-->
+    <LinearLayout
+        android:id="@+id/page_title_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_horizontal"
+        android:background="@drawable/rounded_item_rc"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EDITT"
+            android:textSize="30sp"
+            android:fontFamily="@font/p5hatty"
+            android:textColor="@color/white"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/p5_icon_app"/>
+    </LinearLayout>
+    <!--end of title container-->
+
+    <!--   name -->
+    <TextView
+        android:id="@+id/label_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="persona name"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/p5hatty"
+        app:layout_constraintTop_toBottomOf="@id/page_title_container"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:id="@+id/edit_persona_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:fontFamily="@font/p5hatty"
+        android:hint="edit Persona name here"
+        app:layout_constraintTop_toBottomOf="@id/label_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"/>
+    <!--    arcana -->
+    <TextView
+        android:id="@+id/label_arcana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="persona Arcana"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/p5hatty"
+        app:layout_constraintTop_toBottomOf="@id/edit_persona_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:id="@+id/edit_persona_arcana"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:fontFamily="@font/p5hatty"
+        android:hint="edit Persona Arcana here"
+        app:layout_constraintTop_toBottomOf="@id/label_arcana"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"/>
+    <!--    image -->
+    <TextView
+        android:id="@+id/label_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="persona image (link only)"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/p5hatty"
+        app:layout_constraintTop_toBottomOf="@id/edit_persona_arcana"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:id="@+id/edit_persona_image"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:fontFamily="@font/p5hatty"
+        android:hint="edit Persona image link here"
+        app:layout_constraintTop_toBottomOf="@id/label_image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"/>
+
+    <!--    level -->
+    <TextView
+        android:id="@+id/label_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="persona level"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/p5hatty"
+        app:layout_constraintTop_toBottomOf="@id/edit_persona_image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:id="@+id/edit_persona_level"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:fontFamily="@font/p5hatty"
+        android:hint="edit Persona level here"
+        app:layout_constraintTop_toBottomOf="@id/label_level"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"/>
+
+    <!--    stats -->
+    <TextView
+        android:id="@+id/label_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="persona stats (format -> strength: ?, magic: ?, endurance: ?, agility: ?, luck: ?)"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/p5hatty"
+        app:layout_constraintTop_toBottomOf="@id/edit_persona_level"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:id="@+id/edit_persona_stats"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:fontFamily="@font/p5hatty"
+        android:hint="edit Persona stats here"
+        app:layout_constraintTop_toBottomOf="@id/label_stats"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"/>
+
+    <!--    skills -->
+    <TextView
+        android:id="@+id/label_skills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="persona skills (format -> skill 1 (type, Level ??), skill 2 (type, Level ??))"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/p5hatty"
+        app:layout_constraintTop_toBottomOf="@id/edit_persona_stats"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:id="@+id/edit_persona_skills"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:fontFamily="@font/p5hatty"
+        android:hint="edit Persona skills here"
+        app:layout_constraintTop_toBottomOf="@id/label_skills"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"/>
+
+    <!--    fusion -->
+    <TextView
+        android:id="@+id/label_fusion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fusion recipe (format -> skill 1 (type, Level ??), skill 2 (type, Level ??))"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/p5hatty"
+        app:layout_constraintTop_toBottomOf="@id/edit_persona_skills"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:id="@+id/edit_persona_fusion"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:fontFamily="@font/p5hatty"
+        android:hint="edit Persona fusion recipe here"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_fusion"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save_create_persona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:fontFamily="@font/p5hatty"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_item_rc"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

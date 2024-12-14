@@ -3,6 +3,7 @@ package com.example.uas_pppb_p5_guide
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -31,11 +32,19 @@ class LoginActivity : AppCompatActivity() {
                 val inputPassword = binding.inputPassword.text.toString()
                 if(inputUsername == "admin" && inputPassword == "123"){
                     sharedPreferencesManager.saveLoginStatus(inputUsername, true)
+                    Toast.makeText(this@LoginActivity, "Logged in as Admin", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this@LoginActivity, AdminMainActivity::class.java))
                     finish()
+                } else if (inputUsername == "" && inputPassword != ""){
+                    errorText.text = "username can't empty"
+                } else if (inputUsername != "" && inputPassword == ""){
+                    errorText.text = "password can't empty"
+                } else if (inputUsername == "" && inputPassword == ""){
+                    errorText.text = "username n password can't empty"
                 }
                 else {
                     sharedPreferencesManager.saveLoginStatus(inputUsername,false)
+                    Toast.makeText(this@LoginActivity, "Logged in as user", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                     finish()
                 }

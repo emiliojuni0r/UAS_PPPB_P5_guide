@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -30,7 +31,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.rcPersona.layoutManager = GridLayoutManager(this,2)
 
+        Toast.makeText(this@MainActivity, "loading data...", Toast.LENGTH_LONG).show()
         fetchPersonaList()
+        Toast.makeText(this@MainActivity, "Persona Data loaded", Toast.LENGTH_SHORT).show()
 
         with(binding){
             bottomNavPersona.setOnClickListener{
@@ -83,5 +86,10 @@ class MainActivity : AppCompatActivity() {
                 Log.e("MainActivity", "Error fetching data: ${t.message}")
             }
         })
+    }
+
+    override fun onResume() {
+        super.onResume()
+        fetchPersonaList()
     }
 }

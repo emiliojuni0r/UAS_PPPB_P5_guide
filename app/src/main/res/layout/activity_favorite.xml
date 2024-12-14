@@ -54,6 +54,13 @@
                 android:layout_marginTop="10dp"
                 tools:listitem="@layout/item_persona"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                app:layout_constraintTop_toBottomOf="@id/rc_fav_persona"
+                android:text="."
+                android:textColor="@color/p5_red"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

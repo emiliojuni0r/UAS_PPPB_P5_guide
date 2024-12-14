@@ -2,6 +2,7 @@ package com.example.uas_pppb_p5_guide
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -26,6 +27,7 @@ class ProfileActivity : AppCompatActivity() {
             sharedPreferencesManager.logout() // Panggil fungsi logout
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
+            Toast.makeText(this@ProfileActivity, "Logged Out", Toast.LENGTH_SHORT).show()
         }
 
         binding.bottomNavPersona.setOnClickListener{

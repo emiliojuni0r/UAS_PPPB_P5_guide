@@ -69,4 +69,9 @@ class FavoriteActivity : AppCompatActivity() {
             }
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        fetchFavoritePersonas()
+    }
 }

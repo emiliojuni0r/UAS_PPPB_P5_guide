@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:text="Persona name"
             android:textSize="28sp"
-            android:textColor="@color/p5_red"
+            android:textColor="@color/white"
             android:fontFamily="@font/p5expose"
             app:layout_constraintTop_toBottomOf="@id/img_persona"
             app:layout_constraintStart_toStartOf="parent"

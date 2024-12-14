@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class Persona (
     @SerializedName("_id")
-    val id: String,
+    val id: String ? = null,
     @SerializedName("name")
     val name: String,
     @SerializedName("image")

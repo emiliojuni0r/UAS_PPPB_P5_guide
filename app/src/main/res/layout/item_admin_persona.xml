@@ -14,7 +14,7 @@
 
         <ImageView
             android:id="@+id/img_persona"
-            android:layout_width="180dp"
+            android:layout_width="170dp"
             android:layout_height="150dp"
             android:src="@drawable/example_izanagi"
             app:layout_constraintTop_toTopOf="parent"
@@ -34,10 +34,10 @@
 <!--    edit    -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_edit"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="Edit"
-            android:textSize="28sp"
+            android:textSize="24sp"
             android:textColor="@color/p5_red"
             android:fontFamily="@font/p5hatty"
             app:layout_constraintStart_toEndOf="@id/img_persona"
@@ -47,10 +47,10 @@
 <!--        view-->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_view"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="view"
-            android:textSize="28sp"
+            android:textSize="24sp"
             android:textColor="@color/p5_red"
             android:fontFamily="@font/p5hatty"
             app:layout_constraintStart_toEndOf="@id/btn_edit"
@@ -60,13 +60,14 @@
 <!--        delete -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_Delete"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="Delete"
-            android:textSize="28sp"
+            android:textSize="18sp"
             android:textColor="@color/p5_red"
             android:fontFamily="@font/p5hatty"
             app:layout_constraintStart_toEndOf="@id/img_persona"
+            app:layout_constraintEnd_toEndOf="@id/btn_view"
             app:layout_constraintTop_toBottomOf="@id/btn_view"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="5dp"/>
